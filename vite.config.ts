@@ -8,4 +8,13 @@ export default defineConfig({
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
   },
   server: { host: '0.0.0.0', port: 5173, hmr: false },
+  optimizeDeps: {
+    force: true,
+  },
+  build: {
+    target: 'es2020',
+  },
+  esbuild: {
+    target: 'es2020',
+  },
 });
